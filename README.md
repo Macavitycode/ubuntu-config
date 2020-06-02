@@ -76,4 +76,5 @@ sudo rm /usr/local/bin/pop-shell-shortcuts
 ```
 
 ## Misc
+- Wallpaper from [here](https://wallpapercave.com/w/KY7lCZb)
 - Disable the 'Ctrl + Space' shortcut as it hinders games
