@@ -74,3 +74,6 @@ To remove shortcuts:
 ```
 sudo rm /usr/local/bin/pop-shell-shortcuts
 ```
+
+## Misc
+- Disable the 'Ctrl + Space' shortcut as it hinders games
