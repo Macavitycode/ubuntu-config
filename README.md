@@ -23,13 +23,16 @@ sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 ```
 
-
-
 #### Install other usefull tools
 Like nodejs, npm, python3-venv etc
 ```
 sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool google-chrome-stable libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam sublime-text
 ```
+
+## Dock
+In the installed dconf editor search for dash-to-dock. Changes made here affect the dock directly. The changes I made are:
+- Set extend-height to false
+- Set the dock to bottom
 
 ## Tweaks
 To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/) to firefox and open the following liks with firefox. In the gnome tweaks tool, install the following extensions
@@ -37,8 +40,13 @@ To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/fi
 - [Unite](https://extensions.gnome.org/extension/1287/unite/)
 - Anything else added in the future
 
-## Pop shell (WindowManager)
+#### Hide-top-bar
+Allways hide and show panel when mouse approaches. Disable all options under 'IntelliHide'
 
+#### Unite
+Disable everything / set everything to 'never'. Set only 'Hide window titlebar' to 'Always' and set 'Auto focus new windows' to true
+
+## Pop shell (WindowManager)
 Pretty fun, shows up in tweaks when configured correctly.
 
 #### Install
