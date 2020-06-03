@@ -15,7 +15,20 @@ linux-modules-nvidia-440-generic-hwe-20.04
 nvidia-driver-440
 ```
 
-#### Install gnome-tweaks and gnome shell extensions
+#### Install other usefull tools
+Like nodejs, npm, python3-venv etc
+```
+sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool google-chrome-stable libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam sublime-text sl cmatrix snap rig toilet
+```
+
+
+#### Check manually installed packages
+```
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
+
+```
+
+#### Install gnome-tweaks and gnome shell extensions (if it already has not done it)
 ```
 sudo apt-get update
 sudo apt upgrade
@@ -23,11 +36,13 @@ sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 ```
 
-#### Install other usefull tools
-Like nodejs, npm, python3-venv etc
+
+#### Vim setup
+To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command
 ```
-sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool google-chrome-stable libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam sublime-text
+sudo apt remove --assume-yes vim-tiny && sudo apt update && sudo apt install --assume-yes vim
 ```
+
 
 ## Dock
 In the installed dconf editor search for dash-to-dock. Changes made here affect the dock directly. The changes I made are:
