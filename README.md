@@ -38,10 +38,17 @@ sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gno
 
 
 #### Vim setup
-To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command
+To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command:
 ```
 sudo apt remove --assume-yes vim-tiny && sudo apt update && sudo apt install --assume-yes vim
 ```
+
+Set the repeated click rate to high for convinience. Run this to remap caps-lock to escape:
+```
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+```
+
+Go through vimtutor to learn stuff
 
 
 ## Dock
