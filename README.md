@@ -22,7 +22,6 @@ Like nodejs, npm, python3-venv etc
 sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool google-chrome-stable libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam sublime-text sl cmatrix snap rig toilet
 ```
 
-
 #### Check manually installed packages
 ```
 comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
@@ -37,13 +36,11 @@ sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 ```
 #### Sublime setup
-On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then the following:
+On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then set the following:
 - Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))
-- Git
-
-###### Other stuff
-- Theme -- Adaptive (available by default)
-- Color scheme --monokai (available by default)
+- Git 
+- Theme : Adaptive (available by default)
+- Color scheme : monokai (available by default)
 
 #### Vim setup
 To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command:
