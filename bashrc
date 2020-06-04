@@ -89,6 +89,8 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
+alias x='sl;timeout 4 cmatrix -b;timeout 4 asciiquarium;neofetch'
+alias fc='fortune | cowsay'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
