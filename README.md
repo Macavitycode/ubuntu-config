@@ -36,20 +36,25 @@ sudo apt upgrade
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 ```
+#### Sublime setup
+On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then the following:
+- Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))
+- Git
 
+###### Other stuff
+- Theme -- Adaptive (available by default)
+- Color scheme --monokai (available by default)
 
 #### Vim setup
 To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command:
 ```
 sudo apt remove --assume-yes vim-tiny && sudo apt update && sudo apt install --assume-yes vim
 ```
-
 Set the repeated click rate to high for convinience. Run this to remap caps-lock to escape:
 ```
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 ```
-
-Go through vimtutor to learn stuff
+Check vimrc for more details 
 
 
 ## Dock
@@ -104,6 +109,7 @@ sudo rm /usr/local/bin/pop-shell-shortcuts
 ## Misc
 - Wallpaper from [here](https://wallpapercave.com/w/KY7lCZb)
 - Disable the 'Ctrl + Space' shortcut as it hinders games
+- Icon theme is set to the default Adwaita
 
 
 ## Screenshots
