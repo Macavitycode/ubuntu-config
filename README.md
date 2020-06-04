@@ -2,6 +2,7 @@
 
 This repo is for keeping track of customisations I made to Ubuntu.
 
+
 ## Terminal related (and installs)
 To import my treminal settings download the usable-theme-profile.dconf from this repo and do  
 ``` dconf load /org/gnome/terminal/legacy/profiles:/:1430663d-083b-4737-a7f5-8378cc8226d1/ < path/to/usable-theme-profile.dconf``` 
@@ -56,6 +57,7 @@ In the installed dconf editor search for dash-to-dock. Changes made here affect 
 - Set extend-height to false
 - Set the dock to bottom
 
+
 ## Tweaks
 To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/) to firefox and open the following liks with firefox. In the gnome tweaks tool, install the following extensions
 - [hide-top-bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
@@ -67,6 +69,7 @@ Allways hide and show panel when mouse approaches. Disable all options under 'In
 
 #### Unite
 Disable everything / set everything to 'never'. Set only 'Hide window titlebar' to 'Always' and set 'Auto focus new windows' to true
+
 
 ## Pop shell (WindowManager)
 Pretty fun, shows up in tweaks when configured correctly.
@@ -96,6 +99,7 @@ To remove shortcuts:
 ```
 sudo rm /usr/local/bin/pop-shell-shortcuts
 ```
+
 
 ## Misc
 - Wallpaper from [here](https://wallpapercave.com/w/KY7lCZb)
