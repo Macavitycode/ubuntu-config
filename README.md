@@ -38,6 +38,8 @@ sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gno
 On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then set the following:
 - Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))
 - Git 
+- Git gutter
+- SideBarEnhancements
 - Theme : Adaptive (available by default)
 - Color scheme : monokai (available by default)
 
