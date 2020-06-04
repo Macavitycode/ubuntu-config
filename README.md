@@ -1,7 +1,6 @@
 # Ubuntu config
 
-This repo is for keeping track of customisations I made to Ubuntu.
-
+Here are the important changes I made to ubuntu.
 
 ## Terminal related (and installs)
 To import my treminal settings download the usable-theme-profile.dconf from this repo and do  
