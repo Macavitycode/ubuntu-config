@@ -57,9 +57,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\w]\[\033[00m\] $ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\[\033[01;34m\]\w\[\033[01;32m\]] \[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}[\w]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}[\w] $ '
 fi
 unset color_prompt force_color_prompt
 
@@ -89,9 +90,9 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias x='sl;timeout 4 cmatrix -b;timeout 4 asciiquarium;neofetch'
-alias fc='fortune | cowsay'
-
+alias la='ls -A'
+alias l='ls -CF'
+alias sz='source .bashrc'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -115,3 +116,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export PATH="$PATH:/home/shashank/.local/bin"
