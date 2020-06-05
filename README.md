@@ -50,6 +50,7 @@ After a fresh install of jupyter add this
 - ```pip3 install jupyterthemes && pip3 install --upgrade jupyterthemes ```.
 - Upgrade the current installed notebook with ``` pip3 install --upgrade notebook ```. 
 - To apply the monokai theme refer [this](https://medium.com/@rbmsingh/making-jupyter-dark-mode-great-5adaedd814db), and run this ``` jt -t monokai```.
+- To get oceans16 theme, do ``` jt -t oceans16 ```
 ###### Extensions
 - ```sudo pip3 install jupyter_contrib_nbextensions && jupyter contrib nbextension install ```
 - Enable 
