@@ -36,7 +36,7 @@ sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gno
 ```
 #### Sublime setup
 On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then set the following:
-- Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))
+- Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))(add ```{"keys": ["alt+`"], "command": "toggle_terminus_panel"}``` to sublime key bindings)
 - Git 
 - Git gutter
 - SideBarEnhancements
