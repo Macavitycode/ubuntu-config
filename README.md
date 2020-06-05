@@ -40,6 +40,7 @@ On a fresh install of sublime (which you will have if you copied the previous st
 - Git 
 - Git gutter
 - SideBarEnhancements
+- Icon Theme: A File Icon
 - Theme : Adaptive (available by default)
 - Color scheme : monokai (available by default)
 
