@@ -44,6 +44,16 @@ On a fresh install of sublime (which you will have if you copied the previous st
 - Theme : Adaptive (available by default)
 - Color scheme : monokai (available by default)
 
+#### Jupyter setup
+After a fresh install of jupyter add this
+###### Themes
+- ```pip3 install jupyterthemes && pip3 install --upgrade jupyterthemes ```.
+- Upgrade the current installed notebook with ``` pip3 install --upgrade notebook ```. 
+- To apply the monokai theme refer [this](https://medium.com/@rbmsingh/making-jupyter-dark-mode-great-5adaedd814db), and run this ``` jt -t monokai```.
+###### Extensions
+- ```sudo pip3 install jupyter_contrib_nbextensions && jupyter contrib nbextension install ```
+- Enable 
+
 #### Vim setup
 To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command:
 ```
