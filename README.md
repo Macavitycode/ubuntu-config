@@ -53,7 +53,7 @@ After a fresh install of jupyter add this
 - To get oceans16 theme, do ``` jt -t oceans16 ```
 ###### Extensions
 - ```sudo pip3 install jupyter_contrib_nbextensions && jupyter contrib nbextension install ```
-- Enable 
+- Enable ..?
 
 #### Vim setup
 To install the full version of vim, follow [this](https://www.simplified.guide/ubuntu/install-vim), or the run this command:
