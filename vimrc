@@ -10,6 +10,7 @@
 "
 "#############################################################################
 
+
 " Vim settings
 "-----------------------------------------------------------------------------
 
@@ -18,7 +19,6 @@ colorscheme monokai                     " Set colorscheme
                                         " No comment in the following line (?)
 hi Normal guibg=NONE ctermbg=NONE       
                                         " Makes background same as terminal
-
 set noerrorbells                        " No sounds on errors
 set tabstop=4 softtabstop=4 expandtab   " Sets tabs's width
 set shiftwidth=4                        " Shifts 4 spaces (Indenting)(V + >)
@@ -34,6 +34,8 @@ set undodir=~/.vim/undodir              " Sets undodir (make this dir)
 set undofile                            " Sets undofiles for every file
 set incsearch                           " Enables incremental search
 set hlsearch                            " Enables highlights for searches
+set path+=**                            " Allows vim to look through files
+
 
 " Plugins (Call PlugInstall after making changes here)
 "-----------------------------------------------------------------------------
@@ -43,18 +45,27 @@ Plug 'preservim/nerdtree'               " Shows project structure
 Plug 'crusoexia/vim-monokai'            " Gets monokai theme
 Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'mbbill/undotree'                  " Gives a file changes tree
+Plug 'itchyny/lightline.vim'            " Status line plugin
 Plug 'git@github.com:Valloric/YouCompleteMe' " Look below
 call plug#end()
 
-" To enable autocomplete go to .vim/plugged/YouCompleteMe 
+" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
 " and do ./install.py
+
 
 " Plugin settings
 "-----------------------------------------------------------------------------
 
-" Both of these semm to not bw working
+" Both of these seem to not be working
 let g:NERDTree_banner=0                 " Disables NERDTree banner
 let g:NERDTree_WinSize=1                " Sets NERDTree window size as %
+
+
+" Status line
+"-----------------------------------------------------------------------------
+set laststatus=2                        " Enables statusline
+set noshowmode                          " Disables mode show in command line
+
 
 " Remaps
 "-----------------------------------------------------------------------------
