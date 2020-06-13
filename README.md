@@ -105,6 +105,9 @@ cd shell-shortcuts
 make
 sudo make install
 ```
+
+Add this to remove super+q default gnome bind ```gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false```
+
 #### Remove
 To remove pop-shell
 ```

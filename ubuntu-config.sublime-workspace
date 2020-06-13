@@ -7,6 +7,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 4647,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -190,8 +199,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4174,
+								4174
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -264,13 +303,13 @@
 	},
 	"select_project":
 	{
-		"height": 796.0,
+		"height": 833.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"",
-				"~/projects/slcmscraper/ubuntu-config.sublime-workspace"
+				"~/projects/fullstackwebdev/fullstackwebdev.sublime-project"
 			]
 		],
 		"width": 380.0
