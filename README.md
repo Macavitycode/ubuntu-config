@@ -60,11 +60,16 @@ To install the full version of vim, follow [this](https://www.simplified.guide/u
 ```
 sudo apt remove --assume-yes vim-tiny && sudo apt update && sudo apt install --assume-yes vim
 ```
+Get vim-plug with this:
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 Set the repeated click rate to high for convinience. Run this to remap caps-lock to escape:
 ```
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 ```
-Check vimrc for more details 
+Copy ```vimrc``` into ```~/.vimrc``` and look at packages in that
 
 
 ## Dock
