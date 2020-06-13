@@ -11,11 +11,31 @@
 "#############################################################################
 
 
+" Plugins (Call PlugInstall after making changes here)
+"-----------------------------------------------------------------------------
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'               " Shows project structure
+Plug 'tpope/vim-fugitive'               " Git integration
+Plug 'mbbill/undotree'                  " Gives a file changes tree
+Plug 'itchyny/lightline.vim'            " Status line plugin
+Plug 'valloric/youcompleteme'           " Look below
+call plug#end()
+
+" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
+" and do ./install.py
+
+
 " Vim settings
 "-----------------------------------------------------------------------------
 
 syntax on                               " For syntax highlighting
-colorscheme monokai                     " Set colorscheme
+
+" Copy the monokai.vim file from https://github.com/crusoexia/vim-monokai
+" into ~/.vim/colors/monokai.vim
+colorscheme monokai                     " Set colorscheme from here
+set t_Co=256                            " Support 256 colours in terminal.
+
                                         " No comment in the following line (?)
 hi Normal guibg=NONE ctermbg=NONE       
                                         " Makes background same as terminal
@@ -37,22 +57,6 @@ set hlsearch                            " Enables highlights for searches
 set path+=**                            " Allows vim to look through files
 
 
-" Plugins (Call PlugInstall after making changes here)
-"-----------------------------------------------------------------------------
-
-call plug#begin('~/.vim/plugged')
-Plug 'preservim/nerdtree'               " Shows project structure
-Plug 'crusoexia/vim-monokai'            " Gets monokai theme
-Plug 'tpope/vim-fugitive'               " Git integration
-Plug 'mbbill/undotree'                  " Gives a file changes tree
-Plug 'itchyny/lightline.vim'            " Status line plugin
-Plug 'git@github.com:Valloric/YouCompleteMe' " Look below
-call plug#end()
-
-" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
-" and do ./install.py
-
-
 " Plugin settings
 "-----------------------------------------------------------------------------
 
@@ -63,8 +67,18 @@ let g:NERDTree_WinSize=1                " Sets NERDTree window size as %
 
 " Status line
 "-----------------------------------------------------------------------------
+
 set laststatus=2                        " Enables statusline
 set noshowmode                          " Disables mode show in command line
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 
 " Remaps
