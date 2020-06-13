@@ -22,7 +22,7 @@ Plug 'itchyny/lightline.vim'            " Status line plugin
 Plug 'valloric/youcompleteme'           " Look below
 call plug#end()
 
-" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
+" To enable YouCompleteMe go to .vim/plugged/youcompleteme 
 " and do ./install.py
 
 
@@ -55,6 +55,9 @@ set undofile                            " Sets undofiles for every file
 set incsearch                           " Enables incremental search
 set hlsearch                            " Enables highlights for searches
 set path+=**                            " Allows vim to look through files
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 
 " Plugin settings
