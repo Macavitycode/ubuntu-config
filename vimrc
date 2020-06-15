@@ -19,11 +19,12 @@ Plug 'preservim/nerdtree'               " Shows project structure
 Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'mbbill/undotree'                  " Gives a file changes tree
 Plug 'itchyny/lightline.vim'            " Status line plugin
-Plug 'valloric/youcompleteme'           " Look below
+
+Plug 'ycm-core/YouCompleteMe'           " Look below
 call plug#end()
 
-" To enable YouCompleteMe go to .vim/plugged/youcompleteme 
-" and do ./install.py
+" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
+" and do python3 install.py --all
 
 
 " Vim settings
