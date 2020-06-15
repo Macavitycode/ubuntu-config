@@ -84,12 +84,14 @@ To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/fi
 - [Unite](https://extensions.gnome.org/extension/1287/unite/)
 - Anything else added in the future
 
+#### Hide gnome-terminal's header bar
+```gsettings set org.gnome.Terminal.Legacy.Settings headerbar false```
+
 #### Hide-top-bar
 Allways hide and show panel when mouse approaches. Disable all options under 'IntelliHide'
 
-#### Unite
+#### Unite (?? not fully sure)
 Disable everything / set everything to 'never'. Set only 'Hide window titlebar' to 'Always' and set 'Auto focus new windows' to true
-
 
 ## Pop shell (WindowManager)
 Pretty fun, shows up in tweaks when configured correctly.
@@ -98,7 +100,7 @@ Pretty fun, shows up in tweaks when configured correctly.
 To get pop-shell:
 ```
 sudo apt install node-typescript --global
-git clone https://github.com/pop-os/shell
+git clone https://github.com/pop-os/shell.git
 cd shell
 ./rebuild.sh
 ```
