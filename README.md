@@ -15,6 +15,9 @@ linux-modules-nvidia-440-generic-hwe-20.04
 nvidia-driver-440
 ```
 
+#### Store git details with
+```git config --global credential.helper store```
+
 #### Install other usefull tools
 Like nodejs, npm, python3-venv etc
 ```
