@@ -20,11 +20,14 @@ Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'mbbill/undotree'                  " Gives a file changes tree
 Plug 'itchyny/lightline.vim'            " Status line plugin
 
+" Plug 'crusoexia/vim-monokai'            " Monokai colorshceme
+Plug 'pangloss/vim-javascript'
+
 Plug 'ycm-core/YouCompleteMe'           " Look below
 call plug#end()
 
-" To enable YouCompleteMe go to .vim/plugged/YouCompleteMe 
-" and do python3 install.py --all
+" To enable YouCompleteMe go to .vim/plugged/youcompleteme 
+" and do ./install.py
 
 
 " Vim settings
@@ -35,7 +38,8 @@ syntax on                               " For syntax highlighting
 " Copy the monokai.vim file from https://github.com/crusoexia/vim-monokai
 " into ~/.vim/colors/monokai.vim
 colorscheme monokai                     " Set colorscheme from here
-set t_Co=256                            " Support 256 colours in terminal.
+set termguicolors                       " Actual bright color support
+" set t_Co=256                          " Support 256 colours in terminal.
 
                                         " No comment in the following line (?)
 hi Normal guibg=NONE ctermbg=NONE       
