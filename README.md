@@ -99,7 +99,7 @@ Pretty fun, shows up in tweaks when configured correctly.
 #### Install
 To get pop-shell:
 ```
-sudo apt install node-typescript --global
+sudo npm install -g typescript
 git clone https://github.com/pop-os/shell.git
 cd shell
 ./rebuild.sh
