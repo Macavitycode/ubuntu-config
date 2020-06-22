@@ -142,4 +142,6 @@ sudo rm /usr/local/bin/pop-shell-shortcuts
 
 
 ## Screenshots
+
+<img src="screenshots/screenshot1.png" height="256">
 <img src="screenshots/screenshot2.png" height="256">
