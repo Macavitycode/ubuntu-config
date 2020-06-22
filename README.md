@@ -21,7 +21,7 @@ nvidia-driver-440
 #### Install other usefull tools
 Like nodejs, npm, python3-venv etc
 ```
-sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool google-chrome-stable libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam sublime-text sl cmatrix snap rig toilet
+sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam
 ```
 
 #### Check manually installed packages
@@ -35,8 +35,15 @@ comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-
 sudo apt-get update
 sudo apt upgrade
 sudo add-apt-repository universe
-sudo apt install gnome-tweak-tool $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
+sudo apt install gnome-tweak-tool 
+apt search gnome-shell-extension | grep ^gnome | cut -d / -f1
 ```
+
+#### Get chromium and rambox
+```
+sudo apt install -y chromium-browser rambox
+```
+
 #### Sublime setup
 On a fresh install of sublime (which you will have if you copied the previous step), install package control, and then set the following:
 - Terminus (Keybind alt+\` to toggle terminal (unbind it from 'switch windows of application' in ubuntu settings))(add ```{"keys": ["alt+`"], "command": "toggle_terminus_panel"}``` to sublime key bindings)
@@ -93,7 +100,7 @@ To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/fi
 #### Hide-top-bar
 Allways hide and show panel when mouse approaches. Disable all options under 'IntelliHide'
 
-#### Unite (?? not fully sure)
+#### Unite (?? not fully sure) (!! Dont use !!)
 Disable everything / set everything to 'never'. Set only 'Hide window titlebar' to 'Always' and set 'Auto focus new windows' to true
 
 ## Pop shell (WindowManager)
@@ -130,11 +137,9 @@ sudo rm /usr/local/bin/pop-shell-shortcuts
 
 
 ## Misc
-- Wallpaper from [here](https://wallpapercave.com/w/KY7lCZb)
 - Disable the 'Ctrl + Space' shortcut as it hinders games
 - Icon theme is set to the default yaru
 
 
 ## Screenshots
-<img src="screenshots/screenshot1.png" height="256">
 <img src="screenshots/screenshot2.png" height="256">
