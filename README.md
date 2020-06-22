@@ -100,7 +100,7 @@ To make adding extensions easier, add [this](https://addons.mozilla.org/en-US/fi
 #### Hide-top-bar
 Allways hide and show panel when mouse approaches. Disable all options under 'IntelliHide'
 
-#### Unite (?? not fully sure) (!! Dont use !!)
+#### Unite (?? not fully sure)
 Disable everything / set everything to 'never'. Set only 'Hide window titlebar' to 'Always' and set 'Auto focus new windows' to true
 
 ## Pop shell (WindowManager)
