@@ -21,7 +21,7 @@ nvidia-driver-440
 #### Install other usefull tools
 Like nodejs, npm, python3-venv etc
 ```
-sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam
+sudo apt install apt-transport-https build-essential cargo curl dconf-editor git gnome-shell-extensions gnome-tweak-tool libgtk-3-dev make neofetch nodejs npm python3-venv rustc steam python3-pip
 ```
 
 #### Check manually installed packages
@@ -55,6 +55,13 @@ On a fresh install of sublime (which you will have if you copied the previous st
 - Color scheme : monokai (available by default)
 
 #### Jupyter setup
+###### Installation and setup
+```
+sudo pip3 install jupyter
+```
+If you are using chromium
+- ``` jupyter notebook --generate-config ```
+- Go to the file created and change the following: ``` c.NotebookApp.use_redirect_file = False ```
 After a fresh install of jupyter add this
 ###### Themes
 - ```pip3 install jupyterthemes && pip3 install --upgrade jupyterthemes ```.
