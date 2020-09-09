@@ -15,20 +15,20 @@
 "-----------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
-
-" Plug 'preservim/nerdtree'             " Shows project file structure (?)
-
+Plug 'preservim/nerdtree'               " Shows project structure
 Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'mbbill/undotree'                  " Gives a file changes tree
 Plug 'itchyny/lightline.vim'            " Status line plugin
 
-" Plug 'crusoexia/vim-monokai'          " Monokai colorshceme
-Plug 'MaxMEllon/vim-jsx-pretty'         " JS highlighting
-Plug 'pangloss/vim-javascript'          " JS highlighting
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 
-Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'vim-syntastic/syntastic'
 
-Plug 'ycm-core/YouCompleteMe'           " Look below
+Plug 'valloric/youcompleteme'           " Look below
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " To enable YouCompleteMe go to .vim/plugged/youcompleteme 
@@ -43,9 +43,7 @@ syntax on                               " For syntax highlighting
 " Copy the monokai.vim file from https://github.com/crusoexia/vim-monokai
 " into ~/.vim/colors/monokai.vim
 colorscheme monokai                     " Set colorscheme from here
-set termguicolors                       " Actual bright color support
-" set t_Co=256                          " Support 256 colours in terminal.
-
+" set termguicolors                     " Sets 256 bit color
                                         " No comment in the following line (?)
 hi Normal guibg=NONE ctermbg=NONE       
                                         " Makes background same as terminal
@@ -69,17 +67,26 @@ set path+=**                            " Allows vim to look through files
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+set backspace=indent,eol,start          " Mac specific to make delete key work
 
 " Plugin settings
 "-----------------------------------------------------------------------------
 
 " Both of these seem to not be working
-" let g:NERDTree_banner=0                 " Disables NERDTree banner
-" let g:NERDTree_WinSize=1                " Sets NERDTree window size as %
+let g:NERDTree_banner=0                 " Disables NERDTree banner
+let g:NERDTree_WinSize=1                " Sets NERDTree window size as %
 
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+let g:airline#extensions#ale#enabled = 1
 
+
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+ 
+" let g:syntastic_python_python_exec = '/usr/bin/python3'
+" let g:syntastic_python_checkers = ['pylint']
 
 " Status line
 "-----------------------------------------------------------------------------
@@ -95,34 +102,6 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-
-
-
-" netrw settings
-"-----------------------------------------------------------------------------
-
-let g:NetrwIsOpen=0
-
-function! ToggleNetrw()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Lexplore
-    endif
-endfunction
-
-let g:netrw_banner = 0
-let g:netrw_winsize = 20
-
-
 
 
 " Remaps
@@ -141,16 +120,13 @@ nnoremap <leader>n :tabn<CR>
 nnoremap <leader>p :tabp<CR>
 
 " Toggles NERDTree with <leader>+t (adding vertical resize here)
-" nnoremap <leader>t :NERDTreeToggle .<CR> :vertical res -10<CR>
-
-" Toggles netrw with <leader>+t
-nnoremap <silent><leader>t :call ToggleNetrw()<CR>
+nnoremap <leader>t :NERDTreeToggle .<CR> :vertical res -10<CR>
 
 " Toggles Undotree with Ctrl+z
 nnoremap <C-z> :UndotreeToggle<CR>
 
-" Goto definition
-nnoremap <leader>g :YcmCompleter GoTo<CR>
+" Open vertical split with Ctrl+c
+nnoremap <C-c> <C-w>v<CR>
 
 " Close current buffer with Ctrl+x
 nnoremap <C-x> :q<CR>
@@ -161,16 +137,3 @@ imap <C-s> <Esc>:retab<CR>:w<CR>
 
 " Removes all highlights with <esc><esc>
 nnoremap <esc><esc> :let @/=""<CR>
-
-" Tab to autocomplete
-imap <Tab> <C-P>
-
-
-" Command remaps
-"-----------------------------------------------------------------------------
-
-" Remaps wq to wq
-command WQ wq
-command Wq wq
-command W w
-command Q q
