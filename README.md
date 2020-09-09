@@ -142,6 +142,12 @@ To remove shortcuts:
 sudo rm /usr/local/bin/pop-shell-shortcuts
 ```
 
+## For using with WSL
+Windows files will give an error because of the different line characters. Clean the files with 
+```
+sed -i -e 's/\r$//' <filename>
+```
+
 
 ## Misc
 - Disable the 'Ctrl + Space' shortcut as it hinders games
